@@ -1,10 +1,15 @@
+"use client";
+import { GraduationCap } from "@phosphor-icons/react";
 import Card from "../Utilities/Card";
 import Title from "../Utilities/Title";
 
 const Study = () => {
   return (
     <section className="max-w-4xl mx-auto px-7 lg:px-0 mb-8">
-      <Title text="🎓 Pendidikan" />
+      <div className="flex gap-2">
+        <GraduationCap size={32} />
+        <Title text="Pendidikan" />
+      </div>
       <div className="flex flex-col gap-5">
         <Card
           title="SMK Negeri 1 Bangsri"
