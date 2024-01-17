@@ -4,7 +4,6 @@ import Hero from "./components/Hero";
 import ProjectList from "./components/ProjectList";
 import Study from "./components/Study";
 import Border from "./components/Utilities/Border";
-import ButtonTheme from "./components/Utilities/ButtonTheme";
 
 export default function Home() {
   return (
