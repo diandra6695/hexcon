@@ -9,7 +9,7 @@ const Hero = () => {
           <h1 className="mb-5 text-4xl font-bold leading-tight md:text-4xl lg:text-5xl dark:text-white">
             Hello, I'm Diandra.
           </h1>
-          <p className="mb-6 text-base text-neutral-600 dark:text-neutral-400">
+          <p className="mb-6 md:text-base text-sm text-neutral-600 dark:text-neutral-400">
             I'm a web developer living in Jepara, Indonesia.
             <br />I specialize in Laravel Development, TALL Stack (Tailwind CSS,
             Alpine JS, Laravel and Livewire) is my favorite stack.

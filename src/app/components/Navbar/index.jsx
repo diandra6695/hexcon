@@ -28,50 +28,85 @@ const DesktopMenu = () => {
   );
 };
 
-const MobileMenu = () => {
-  const [isOpenMenu, setIsOpenMenu] = useState(false);
+// const MobileMenu = () => {
+//   const [isOpenMenu, setIsOpenMenu] = useState(false);
 
-  const handleClick = () => {
-    setIsOpenMenu(true);
-  };
-  return (
-    <div className="flex">
-      <button onClick={handleClick} className="">
-        {isOpenMenu ? <X size={25} /> : <Equals size={25} />}
-      </button>
-    </div>
-  );
-};
+//   const handleClick = () => {
+//     setIsOpenMenu(!isOpenMenu);
+//   };
+//   return (
+//     <div className="flex">
+//       <button onClick={handleClick} className="">
+//         {isOpenMenu ? <X size={25} /> : <Equals size={25} />}
+//       </button>
+//     </div>
+//   );
+// };
 
 const Navbar = () => {
   const [isMobile, setIsMobile] = useState(false);
+  const [isOpenMenu, setIsOpenMenu] = useState(false);
+
+  const handleClick = () => {
+    setIsOpenMenu(!isOpenMenu);
+  };
 
   React.useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 960);
     };
-
-    // Panggil handleResize saat halaman dimuat dan saat lebar browser berubah
     handleResize();
     window.addEventListener("resize", handleResize);
 
-    // Membersihkan event listener pada komponen dibongkar
     return () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
   return (
     <header className="top-0 z-50 w-full fixed h-14">
-      <div className="flex items-center justify-between h-full max-w-5xl pl-6 pr-4 mx-auto border-b border-l-0 border-r-0 select-none lg:border-r lg:border-l lg:rounded-b-xl border-neutral-300/50 bg-white/80 dark:border-neutral-600/40 dark:bg-neutral-900/60 backdrop-blur-2xl">
+      <div
+        className={`flex items-center justify-between h-full max-w-5xl transition-transform pl-6 pr-4 mx-auto  select-none ${
+          isOpenMenu
+            ? "bg-white dark:bg-neutral-950"
+            : "lg:border-r lg:border-l lg:rounded-b-xl border-b border-l-0 border-r-0 border-neutral-300/50 bg-white/80 dark:border-neutral-600/40 dark:bg-neutral-900/60 backdrop-blur-2xl"
+        } `}
+      >
         <Link
           href="/"
-          className="h-5 text-base group relative z-30 flex items-center space-x-1.5 text-black dark:text-white font-semibold"
+          className="h-5 text-sm group relative z-30 flex items-center space-x-1.5 text-black dark:text-white font-semibold"
         >
           <span>Hexcon</span>
         </Link>
         <nav className="relative z-30 flex flex-row-reverse justify-start w-full text-sm  text-neutral-500 dark:text-neutral-400">
-          {isMobile ? <MobileMenu /> : <DesktopMenu />}
+          {isMobile ? (
+            <div className="flex">
+              <button onClick={handleClick} className="">
+                {isOpenMenu ? <X size={25} /> : <Equals size={25} />}
+              </button>
+            </div>
+          ) : (
+            <DesktopMenu />
+          )}
         </nav>
+      </div>
+      <div
+        className={`h-screen w-full ${
+          isOpenMenu ? "" : "hidden"
+        } bg-white dark:bg-neutral-950 bg-opacity-90 transition-all`}
+      >
+        <div className="mx-4 bg-white dark:bg-neutral-950 rounded-lg p-5 border border-dashed border-neutral-300 dark:border-neutral-500">
+          <ul className="flex flex-col items-center gap-2 text-sm">
+            <li>
+              <a href="">Home</a>
+            </li>
+            <li>
+              <a href="">Project</a>
+            </li>
+            <li>
+              <a href="">About</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
   );

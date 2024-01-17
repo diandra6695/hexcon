@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const CardProject = () => {
   return (
-    <div className="border-dashed border border-neutral-500 p-6 rounded-2xl">
+    <div className="border-dashed border border-neutral-300 dark:border-neutral-500 p-6 rounded-2xl">
       <div className="">
         <Image src="" alt="" width={300} height={250} />
       </div>

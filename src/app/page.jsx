@@ -1,8 +1,10 @@
 import Experience from "./components/Experience";
+import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import ProjectList from "./components/ProjectList";
 import Study from "./components/Study";
 import Border from "./components/Utilities/Border";
+import ButtonTheme from "./components/Utilities/ButtonTheme";
 
 export default function Home() {
   return (
@@ -13,7 +15,7 @@ export default function Home() {
       <Experience />
       <Border title="CHECK OUT MY PROJECTS" />
       <ProjectList />
-      <Border title="SOME OF MY WRITING" />
+      <Footer />
     </div>
   );
 }
