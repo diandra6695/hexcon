@@ -4,13 +4,18 @@ import Button from "../Utilities/Button";
 const Hero = () => {
   return (
     <div className="relative z-20 w-full max-w-4xl mx-auto mt-24 px-7 md:mt-24 lg:mt-36 xl:px-0">
-      <div className="flex flex-col items-center md:flex-row">
+      <div className="flex items-center md:flex-row flex-col-reverse">
         <div className="relative w-full md:w-1/2">
-          <h1 className="mb-3 text-4xl font-bold leading-tight md:text-4xl lg:text-5xl dark:text-white">
+          <h1 className="mb-3 hidden md:block text-4xl font-bold leading-tight md:text-4xl lg:text-5xl dark:text-white">
             Hello, I'm Diandra.
           </h1>
           <p className="mb-4 md:text-sm text-sm text-neutral-600 dark:text-neutral-400">
-          Siswa SMK Negeri 1 Bangsri Jurusan PPLG dengan pengalaman mengembangkan 5 website. Mahir dalam framework JavaScript, PHP, dan CSS, serta berpengalaman dengan Visual Studio Code. Selalu mengikuti tren terbaru dalam pengembangan web dan bersemangat untuk berkontribusi pada tim inovatif. Terbuka untuk memperluas keahlian dalam pengembangan full-stack.
+            Siswa SMK Negeri 1 Bangsri Jurusan PPLG dengan pengalaman
+            mengembangkan 5 website. Mahir dalam framework JavaScript, PHP, dan
+            CSS, serta berpengalaman dengan Visual Studio Code. Selalu mengikuti
+            tren terbaru dalam pengembangan web dan bersemangat untuk
+            berkontribusi pada tim inovatif. Terbuka untuk memperluas keahlian
+            dalam pengembangan full-stack.
           </p>
           <p className="mb-2 font-semibold text-neutral-800 dark:text-neutral-200">
             I can help you out with:
@@ -42,8 +47,12 @@ const Hero = () => {
             />
           </div>
         </div>
-        <div className="relative justify-end hidden w-full mt-10 md:flex md:pl-10 md:w-1/2 md:mt-0 md:translate-y-4 xl:translate-y-0">
-          <div className="absolute bottom-0 z-40 w-16 h-16 -translate-x-[21.9rem] -translate-y-1/2 lg:top-auto top-0 lg:-translate-y-[330px] rounded-full">
+
+        <div className="relative justify-end w-full md:flex md:pl-10 md:w-1/2 md:mt-0 md:translate-y-4 xl:translate-y-0 mb-3">
+          <h1 className="mb-7 md:hidden text-4xl font-bold leading-tight md:text-4xl lg:text-5xl dark:text-white">
+            Hello, I'm Diandra.
+          </h1>
+          <div className="absolute bottom-0 z-40 w-16 h-16 md:-translate-x-[21.9rem] -translate-x-6 translate-y-12 md:-translate-y-1/2 lg:top-auto top-0 lg:-translate-y-[330px] rounded-full">
             <span className="relative z-20 flex items-center justify-center w-full h-full text-2xl border-8 border-white rounded-full dark:border-neutral-950 bg-neutral-100 dark:bg-neutral-900">
               <span className="flex items-center justify-center w-full h-full bg-white border border-dashed rounded-full dark:bg-neutral-950 border-neutral-300 dark:border-neutral-700">
                 😎
