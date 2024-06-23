@@ -11,7 +11,7 @@ export default function Home() {
       <Hero />
       <Border title="MORE ABOUT ME" />
       <Study />
-      <Experience />
+      {/* <Experience /> */}
       <Border title="CHECK OUT MY PROJECTS" />
       <ProjectList />
       <Footer />

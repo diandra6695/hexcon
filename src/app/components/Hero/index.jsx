@@ -6,13 +6,11 @@ const Hero = () => {
     <div className="relative z-20 w-full max-w-4xl mx-auto mt-24 px-7 md:mt-24 lg:mt-36 xl:px-0">
       <div className="flex flex-col items-center md:flex-row">
         <div className="relative w-full md:w-1/2">
-          <h1 className="mb-5 text-4xl font-bold leading-tight md:text-4xl lg:text-5xl dark:text-white">
+          <h1 className="mb-3 text-4xl font-bold leading-tight md:text-4xl lg:text-5xl dark:text-white">
             Hello, I'm Diandra.
           </h1>
-          <p className="mb-6 md:text-base text-sm text-neutral-600 dark:text-neutral-400">
-            I'm a web developer living in Jepara, Indonesia.
-            <br />I specialize in Laravel Development, TALL Stack (Tailwind CSS,
-            Alpine JS, Laravel and Livewire) is my favorite stack.
+          <p className="mb-4 md:text-sm text-sm text-neutral-600 dark:text-neutral-400">
+          Siswa SMK Negeri 1 Bangsri Jurusan PPLG dengan pengalaman mengembangkan 5 website. Mahir dalam framework JavaScript, PHP, dan CSS, serta berpengalaman dengan Visual Studio Code. Selalu mengikuti tren terbaru dalam pengembangan web dan bersemangat untuk berkontribusi pada tim inovatif. Terbuka untuk memperluas keahlian dalam pengembangan full-stack.
           </p>
           <p className="mb-2 font-semibold text-neutral-800 dark:text-neutral-200">
             I can help you out with:
