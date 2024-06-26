@@ -12,12 +12,14 @@ const Study = () => {
       </div>
       <div className="flex flex-col gap-5">
         <div className="w-full rounded-2xl flex flex-col gap-3 bg-neutral-100 dark:bg-neutral-900 p-5">
-          <h3 className="text-base">
-            <span className="text-xl font-bold">SMK Negeri 1 Bangsri</span> |
-            SMK Pengembangan Perangkat Lunak dan Gim | JL. KH. Achmad Fauzan No.
-            17, Bangsri, Jepara, Jawa Tengah 59453 | 2022 - Sekarang
-          </h3>
-          <ul className="list-disc list-inside text-sm">
+          <header>
+            <h3 className="text-xl mb-2 font-bold">SMK Negeri 1 Bangsri</h3>
+            <p className="text-sm">
+              SMK Pengembangan Perangkat Lunak dan Gim | JL. KH. Achmad Fauzan
+              No. 17, Bangsri, Jepara, Jawa Tengah 59453 | 2022 - Sekarang
+            </p>
+          </header>
+          <ul className="list-disc list-inside text-sm text-neutral-600 dark:text-neutral-400">
             <li>
               Mampu membuat tugas akhir yang bermanfaat untuk sekolah dan
               organisasi yaitu Website Arsip Surat yang inovatif.
@@ -48,18 +50,22 @@ const Study = () => {
           </ul>
         </div>
         <div className="w-full rounded-2xl flex flex-col gap-3 bg-neutral-100 dark:bg-neutral-900 p-5">
-          <h3 className="text-base">
-            <span className="text-xl font-bold">SMP Negeri 1 Keling</span> |
-            Jalan Raya Kelet - Bangsri Karang Anyar, Karang Anyar, Jlegong, Kec.
-            Keling, Kabupaten Jepara, Jawa Tengah 59454 | 2019 - 2021
-          </h3>
+          <header>
+            <h3 className="text-xl mb-2 font-bold">SMP Negeri 1 Keling</h3>
+            <p className="text-sm">
+              Jalan Raya Kelet - Bangsri Karang Anyar, Karang Anyar, Jlegong,
+              Kec. Keling, Kabupaten Jepara, Jawa Tengah 59454 | 2019 - 2021
+            </p>
+          </header>
         </div>
         <div className="w-full rounded-2xl flex flex-col gap-3 bg-neutral-100 dark:bg-neutral-900 p-5">
-          <h3 className="text-base">
-            <span className="text-xl font-bold">SD Negeri 3 Dermolo</span> | JL.
-            Sebagor Balong, Km. 01, Dermolo, Kembang, Rt 04, RW.06, Dermolo,
-            Jepara, Kabupaten Jepara, Jawa Tengah 59453 | 2012 - 2018
-          </h3>
+          <header>
+            <h3 className="text-xl mb-2 font-bold">SD Negeri 3 Dermolo</h3>
+            <p className="text-sm">
+              Sebagor Balong, Km. 01, Dermolo, Kembang, Rt 04, RW.06, Dermolo,
+              Jepara, Kabupaten Jepara, Jawa Tengah 59453 | 2012 - 2018
+            </p>
+          </header>
         </div>
       </div>
       <div className=""></div>
