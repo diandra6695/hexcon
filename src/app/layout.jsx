@@ -1,6 +1,8 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
+import { Providers } from "./providers";
+import NextTopLoader from "nextjs-toploader";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -11,9 +13,26 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className} suppressHydrationWarning={true}>
-        <Navbar />
-        {children}
+      <body
+        className={`${inter.className} bg-white dark:bg-black`}
+        suppressHydrationWarning={true}
+      >
+        <Providers>
+          <NextTopLoader
+            color="#ffffff"
+            initialPosition={0.08}
+            crawlSpeed={200}
+            height={1.5}
+            crawl={true}
+            showSpinner={false}
+            easing="ease"
+            speed={200}
+            zIndex={8000}
+            showAtBottom={false}
+          />
+          <Navbar />
+          {children}
+        </Providers>
       </body>
     </html>
   );

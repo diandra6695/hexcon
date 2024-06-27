@@ -3,10 +3,11 @@ import { Equals, X } from "@phosphor-icons/react";
 import anime from "animejs";
 import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
+import ThemeSwitch from "../Utilities/ThemeSwitch";
 
 const DesktopMenu = () => {
   return (
-    <div className="fixed ease-out duration-300 sm:top-0 w-full left-0 sm:py-0 pt-7 pb-4 dm:mx-0 z-40 flex-col items-end justify-start h-auto text-sm sm:text-base sm:h-auto sm:relative sm:flex-row sm:flex sm:w-auto sm:pr-0 sm:pt-0 hidden top-[75px]">
+    <div className="fixed ease-out duration-300 sm:top-0 w-full left-0 sm:py-0 pt-7 pb-4 dm:mx-0 z-40 flex-col justify-start h-auto text-sm sm:text-base sm:h-auto sm:relative sm:flex-row sm:flex items-center sm:w-auto sm:pr-0 sm:pt-0 hidden top-[75px]">
       <Link
         href="/"
         className="relative text-sm flex items-center justify-center w-full px-3 py-2 font-medium tracking-wide text-center duration-200 ease-out sm:py-0 sm:mb-0 md:w-auto hover:text-neutral-900 dark:hover:text-white text-neutral-900 dark:text-white"
@@ -25,6 +26,7 @@ const DesktopMenu = () => {
       >
         About
       </Link>
+      <ThemeSwitch />
     </div>
   );
 };
@@ -62,7 +64,7 @@ const Navbar = () => {
     };
   }, []);
   return (
-    <header className="navbar top-0 z-50 w-full fixed h-14 -translate-y-20 ">
+    <header className="navbar top-0 z-50 w-full fixed h-14 -translate-y-20">
       <div
         className={`flex items-center justify-between h-full max-w-5xl transition-transform pl-6 pr-4 mx-auto  select-none ${
           isOpenMenu
@@ -78,7 +80,8 @@ const Navbar = () => {
         </Link>
         <nav className="relative z-30 flex flex-row-reverse justify-start w-full text-sm  text-neutral-500 dark:text-neutral-400">
           {isMobile ? (
-            <div className="flex">
+            <div className="flex items-center gap-2">
+              <ThemeSwitch />
               <button onClick={handleClick} className="">
                 {isOpenMenu ? <X size={25} /> : <Equals size={25} />}
               </button>
